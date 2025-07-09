@@ -45,3 +45,9 @@ Thumbs.db
 # AoT generated files
 factories
 migrations.json
+
+.cursor/rules/nx-rules.mdc
+.github/instructions/nx.instructions.md
+.cursor
+.nx
+.vscode

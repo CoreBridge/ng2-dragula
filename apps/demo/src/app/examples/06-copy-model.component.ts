@@ -59,7 +59,8 @@ class Person {
 
 @Component({
   selector: 'ex-06-copy-model',
-  templateUrl: './06-copy-model.component.html'
+  templateUrl: './06-copy-model.component.html',
+  standalone: false
 })
 export class CopyModelComponent {
   code = copyModelCode;
