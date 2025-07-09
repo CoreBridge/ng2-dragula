@@ -466,37 +466,55 @@ There are hundreds of other libraries that do this. Some notable ones:
 
 # Development
 
-- You must use Yarn >= 1.3. It includes the 'workspaces' feature.
-- Please use [Conventional Commits](https://conventionalcommits.org/) in your commit messages.
+This project uses **Nx** as a build system to manage the monorepo workspace. You must use Yarn >= 1.3.
+Please use [Conventional Commits](https://conventionalcommits.org/) in your commit messages.
 
-#### setup
+## Project Structure
 
-```sh
-yarn
-yarn workspace ng2-dragula build
-```
+- `libs/ng2-dragula/` - The main Angular library
+- `apps/demo/` - The demo application showcasing ng2-dragula features
 
-#### run tests
+## Setup
 
 ```sh
-yarn workspace ng2-dragula test
-# or
-yarn workspace ng2-dragula test:headless
+yarn install
+npx nx build ng2-dragula
 ```
 
-#### run demo server
+## Run Tests
 
 ```sh
-# listens for changes in the library and rebuilds on save
-yarn watch
-# runs demo server
-yarn workspace demo start
+# Run tests for the library
+npx nx test ng2-dragula
+
+# Run all tests
+npx nx run-many --target=test --all
 ```
 
-#### Publishing a new version
+## Run Demo Server
 
+```sh
+# Start the demo server
+npx nx serve demo
+
+# Watch for changes and rebuild automatically
+npx nx watch
 ```
-yarn lerna publish
+
+## Build
+
+```sh
+# Build the library
+npx nx build ng2-dragula
+
+# Build all projects
+npx nx run-many --target=build --all
+```
+
+## Publishing a New Version
+
+```sh
+npx nx run ng2-dragula:version
 ```
 
 ## Credits

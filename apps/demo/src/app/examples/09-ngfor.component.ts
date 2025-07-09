@@ -52,7 +52,8 @@ export class NgForComponent {
   templateUrl: './09-ngfor.component.html',
   styles: [`
   .container { min-width: 200px; }
-  `]
+  `],
+  standalone: false
 })
 export class NgForComponent {
   code = repeatCode;

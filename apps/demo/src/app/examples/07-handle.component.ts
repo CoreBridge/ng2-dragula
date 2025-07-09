@@ -27,7 +27,8 @@ export class HandleComponent {
   .container div {
     cursor: initial !important;
   }
-  `]
+  `],
+  standalone: false
 })
 export class HandleComponent {
   code = code;

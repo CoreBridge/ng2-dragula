@@ -43,7 +43,8 @@ type Key = {
   .container div {
     cursor: initial !important;
   }
-  `]
+  `],
+  standalone: false
 })
 export class ClickComponent {
   code = code;

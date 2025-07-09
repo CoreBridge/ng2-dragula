@@ -2,6 +2,7 @@ import { Component } from "@angular/core";
 import { DragulaService } from "ng2-dragula";
 
 @Component({
+  standalone: false,
   selector: 'ex-01-basic',
   template: `
 <div class='parent'>

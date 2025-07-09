@@ -42,7 +42,8 @@ export class NestedComponent {
     display: block;
     padding: 8px;
   }
-  `]
+  `],
+  standalone: false
 })
 export class NestedComponent {
   code = nestedExampleCode;
